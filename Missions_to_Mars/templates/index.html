@@ -29,16 +29,15 @@
         </div>
 
         <div class="row">
-            <div class="col-md-7 .d-md-flex ">
+            <div class="col-md-7 .d-md-flex img-fluid ">
                 <h4>Featured Mars Image</h4>
-                <br>
-                <br>
-                <br>
                 <img class = "imgfeat" src="{{mars.featured_image_url}}" alt="featured image">
             </div>
             <div class="col-md-4 .d-md-flex">
                 <h4>Mars Facts</h4>
-                <div {{mars.html}}> </div>
+                <div > 
+                    {{mars.html | safe}}
+                </div>
 
             </div>
 
