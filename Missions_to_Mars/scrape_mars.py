@@ -6,6 +6,8 @@ import time
 from webdriver_manager.chrome import ChromeDriverManager
 
 
+
+
 def scrape():
     executable_path = {"executable_path": ChromeDriverManager().install()}
     browser = Browser("chrome", **executable_path, headless=False)
@@ -16,7 +18,7 @@ def scrape():
     
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
-    time.sleep(10)
+    time.sleep(14)
     abc= soup.find_all('li', class_= 'slide')[0]
 
     mars_title = ''
@@ -108,14 +110,14 @@ def scrape():
             
         browser.visit(mars_Hemispheres_url)
     browser.quit()
-    main_dict=[{"mars_title" : mars_title},
-                {"mars_body" : mars_body},
-                {"featured_image_url": featured_image_url},
-                {"html": html},
-                {"hemishpere_full": hemishpere_full }]
+    main_dict={"mars_title" : mars_title,
+                "mars_body" : mars_body,
+                "featured_image_url": featured_image_url,
+                "html": html,
+                "hemishpere_full" : hemishpere_full}
 
-
+    print(main_dict)
     return(main_dict)
-main_dict= scrape()
 
-print(main_dict)
+
+    
