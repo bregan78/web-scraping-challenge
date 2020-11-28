@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mission To Mars</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
 </head>
 
 <body>
@@ -26,9 +27,22 @@
 
             </div>
         </div>
-        <div class="row">
 
-            
+        <div class="row">
+            <div class="col-md-7 .d-md-flex ">
+                <h4>Featured Mars Image</h4>
+                <br>
+                <br>
+                <br>
+                <img class = "imgfeat" src="{{mars.featured_image_url}}" alt="featured image">
+            </div>
+            <div class="col-md-4 .d-md-flex">
+                <h4>Mars Facts</h4>
+                <div {{mars.html}}> </div>
+
+            </div>
+
+
         </div>  
     
     
