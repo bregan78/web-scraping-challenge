@@ -18,7 +18,7 @@ def scrape():
     
     html = browser.html
     soup = BeautifulSoup(html, 'html.parser')
-    time.sleep(14)
+    time.sleep(30)
     abc= soup.find_all('li', class_= 'slide')[0]
 
     mars_title = ''
